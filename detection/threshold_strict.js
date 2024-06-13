@@ -4,6 +4,12 @@ let testInput = "abcdefghijklmnopqrstuvwxyzAB@";
 let pattern = new RegExp(regex);
 
 function detectReDoS(input) {
+  // let isTimeout = false;
+
+  // setTimeout(() => {
+  //   isTimeout = true;
+  // }, 10000);
+
   const startTime = Date.now();
 
   pattern.test(input);
@@ -15,12 +21,12 @@ function detectReDoS(input) {
   // console.log(processTime);
 
   if (processTime > 10000) {
-    console.log("ReDoS攻撃を検出しました！" + processTime / 1000 + "秒");
+    console.log("ReDoS脆弱性を検出しました" + processTime / 1000 + "秒");
   } else {
     console.log(
-      "ReDoS攻撃は検出されませんでした。" + processTime / 1000 + "秒"
+      "ReDoS脆弱性は検出されませんでした" + processTime / 1000 + "秒"
     );
   }
 }
 
-detectReDoS(testInput); //ReDoS攻撃を検出しました！18.729秒
+detectReDoS(testInput);
