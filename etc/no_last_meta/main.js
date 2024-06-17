@@ -1,3 +1,6 @@
+//課題点
+//function quesStrJudgeにおいて//(ab)+などの終端が+の正規表現の繰り返しに対応不可
+//（そもそもこれ((ab)+)の繰り返し正規表現が正規表現DoSを引き起こすのか調べる
 function quesCount(regex) {
   let count = 0;
 
@@ -26,11 +29,20 @@ function quesCount(regex) {
 
 function quesStrJudge(match) {
   for (let i = 0; i < match.length - 1; i++) {
-    if (match[i] == match[i + 1]) {
+    let multipleRegex = match[i].split("");
+    if (match[i] == match[i + 1] && match[i].length - 1 == 1) {
+      return true;
+    } else if (
+      match[i] == match[i + 1] &&
+      multipleRegex[1] == "(" &&
+      multipleRegex[match[i].length - 2] == ")"
+    ) {
       return true;
     }
   }
   return false;
 }
 
-const result = quesCount("a?a?a?b?aaab");
+// const result = quesCount("a?a?a?b?aaab");
+// const result = quesCount("(ab)?(ab)?(ab)?(ab)?abababab");
+const result = quesCount("ab?ab?ab?ab?abababab");

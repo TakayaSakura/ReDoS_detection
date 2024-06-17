@@ -1,0 +1,14 @@
+digraph G {
+  "Alternative0.6207992456630074" [ label = "Alternative" ];
+  "Char0.2544664372683769" [ label = "Char" ];
+  "Repetition0.5145067407263193" [ label = "Repetition" ];
+  "Group0.47853752601633026" [ label = "Group" ];
+  "Disjunction0.4366651284488823" [ label = "Disjunction" ];
+  "Char0.8794307654797182" [ label = "Char" ];
+  "Alternative0.6207992456630074" -> "Char0.2544664372683769";
+  "Alternative0.6207992456630074" -> "Repetition0.5145067407263193";
+  "Repetition0.5145067407263193" -> "Group0.47853752601633026";
+  "Group0.47853752601633026" -> "Disjunction0.4366651284488823";
+  "Alternative0.6207992456630074" -> "Char0.8794307654797182";
+}
+
