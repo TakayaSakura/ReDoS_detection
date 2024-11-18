@@ -1,0 +1,25 @@
+{
+  "name": "1-redos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node 1-main/emptyModified.ts",
+    "test": "cowsay meow",
+    "tsukareta": "echo 'otsukare yukkuriyasunde'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.6.0",
+    "selenium-webdriver": "^4.25.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "jest": "^29.7.0",
+    "mocha": "^10.7.3",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  }
+}

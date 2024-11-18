@@ -1,0 +1,16 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest",
+    "pretest": "cowsay lets start!",
+    "posttest": "cowsay end"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

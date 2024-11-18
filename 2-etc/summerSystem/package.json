@@ -1,0 +1,17 @@
+{
+  "name": "summersystem",
+  "version": "1.0.0",
+  "description": "This is Sakurai's summer system no directory dayo",
+  "main": "summer_system.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Takaya Sakurai",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "type": "RegExp",
+  "body": {
+    "type": "Repetition",
+    "expression": {
+      "type": "Group",
+      "capturing": true,
+      "number": 1,
+      "expression": {
+        "type": "Alternative",
+        "expressions": [
+          {
+            "type": "Char",
+            "value": "a",
+            "kind": "simple",
+            "symbol": "a",
+            "codePoint": 97
+          },
+          {
+            "type": "Repetition",
+            "expression": {
+              "type": "Group",
+              "capturing": true,
+              "number": 2,
+              "expression": {
+                "type": "Disjunction",
+                "left": {
+                  "type": "Char",
+                  "value": "b",
+                  "kind": "simple",
+                  "symbol": "b",
+                  "codePoint": 98
+                },
+                "right": {
+                  "type": "Char",
+                  "value": "c",
+                  "kind": "simple",
+                  "symbol": "c",
+                  "codePoint": 99
+                }
+              }
+            },
+            "quantifier": {
+              "type": "Quantifier",
+              "kind": "*",
+              "greedy": true
+            }
+          },
+          {
+            "type": "Char",
+            "value": "d",
+            "kind": "simple",
+            "symbol": "d",
+            "codePoint": 100
+          }
+        ]
+      }
+    },
+    "quantifier": {
+      "type": "Quantifier",
+      "kind": "*",
+      "greedy": true
+    }
+  },
+  "flags": ""
+}
